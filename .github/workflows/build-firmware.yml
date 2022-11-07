@@ -10,6 +10,7 @@ jobs:
       with:
         repository: ${{ github.repository}}
         ref: ${{ github.ref }}
+    - name: load config to env
       id: step_one
       run: |
         echo actions_config.json >> $GITHUB_ENV

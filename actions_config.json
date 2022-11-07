@@ -1,0 +1,8 @@
+{"config":[
+    {"repository":"qmk/qmk_firmware",
+     "branch": "master",
+    "keymap_json":"crkbd.json"},
+    {"repository":"qmk/qmk_firmware",
+     "branch": "develop",
+    "keymap_json":"crkbd.json"}
+    ]}

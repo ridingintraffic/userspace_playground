@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
 # List of keymap json files to build
-        file: "${{ steps.step_one.outputs.config[*].keymap_json }}"
+        file: "${{steps.step_one.outputs.config[*].keymap_json}}"
         
 
 # End of json file list

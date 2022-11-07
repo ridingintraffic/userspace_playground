@@ -13,7 +13,7 @@ jobs:
     - name: load config to env
       id: step_one
       run: |
-        echo actions_config.json >> $GITHUB_ENV
+        echo actions_config.json >> $GITHUB_OUTPUT
   build:
     runs-on: ubuntu-latest
     container: qmkfm/qmk_cli
@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
 # List of keymap json files to build
-        file: "${{env.config[*].keymap_json}}"
+        file: "${{ steps.step_one.outputs.config[*].keymap_json }}"
         
 
 # End of json file list
